@@ -1,0 +1,1314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Work+Sans:wght@400;500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+font-family: 'Work Sans', sans-serif;
+}
+
+:root{
+  --heading: rgb(0 10 45);
+  --para: #252323;
+  --para-tint: #e4e4e4;
+  --white : #fff;
+  --black : #212529;
+  --helper: #8490ff;
+  --helper-tint: #f3f4ff;
+  --bg: rgb(249 249 255);
+  --icon-bg :#90acd133;
+  --overlay: #3e64ff;
+  --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+  --gradientSupport : linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+  --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
+  --shadowSupport : 0px 20px 20px 0px rgb(132 144 255 / 30%)
+}
+
+html{
+font-size: 62.5%; /*1rem = 10px*/
+overflow-x: hidden;
+
+}
+
+body{
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4{
+  font-family: 'Poppins', sans-serif;
+}
+
+h1{
+  color: var(--heading);
+  font-size: 5.8rem;
+  font-weight: 600;
+}
+
+h3{
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+p{
+  color: var(--para);
+  line-height: 1.6;
+  font-size: 1.7rem;
+}
+
+a{
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+li{
+  list-style: none;
+}
+
+/* .................................................. */
+/* header start */
+/* ............................................. */
+
+
+.header{
+  
+  padding: 0 4.8rem;
+  height: 10rem;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo{
+  width: 15rem;
+  height: 5rem;
+  margin: 2rem 0;
+}
+
+.navbar-list{
+  display: flex;
+gap: 3rem;
+}
+
+.navbar-link:link,
+.navbar-link:visited{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+  transition: color 0.2s linear ;
+  -webkit-transition: color 0.2s linear ;
+  -moz-transition: color 0.2s linear ;
+  -ms-transition: color 0.2s linear ;
+  -o-transition: color 0.2s linear ;
+}
+
+.navbar-link:hover,
+.navbar-link:active{
+  color: var(--helper);
+}
+
+.mobile-navbar-btn{
+  display: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.mobile-navbar-icon[name="close-outline"]{
+  display: none;
+}
+
+/* .................................................. */
+/* Reuseable code start */
+/* ............................................. */
+
+.section{
+  padding: 5rem 0;
+}
+
+.container{
+  max-width: 104rem;
+  margin: 0 auto; 
+}
+.grid{
+  display: grid;
+  gap: 9rem;
+}
+
+.grid-two-column{
+  grid-template-columns: repeat(2,1fr);
+}
+
+.grid-three-column{
+  grid-template-columns: repeat(3,1fr);
+}
+
+.grid-four-column{
+  grid-template-columns: repeat(4,1fr);
+}
+
+.btn{
+  background: var(--gradientSupport);
+  padding: 1.6rem 3.2rem;
+  border: none;
+  color: var(--helper-tint);
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease ;
+  
+}
+
+.btn:hover, .btn:active{
+  box-shadow: var(--shadowSupport);
+}
+
+.common-heading{
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 3.5rem;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.common-heading::before{
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--helper);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.common-heading::after{
+  content: "";
+  position: absolute;
+  top: 118%;
+  left: 1.5rem;
+  min-width: 20rem;
+  height: 0.3rem;
+  background-color: var(--helper);
+}
+/* .................................................. */
+/* hero section start */
+/* ............................................. */
+
+.section-hero{
+  background-color: var(--bg);
+}
+.section-hero-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-top-data{
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--helper);
+}
+
+.hero-heading{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 4.5rem;
+}
+
+.hero-para{
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+  /* max-width: 60rem; */
+  text-align: justify;
+}
+
+.section-hero-image{
+  display: grid;
+  place-items: center;
+}
+
+.hero-img{
+  max-width: 70%;
+}
+
+/* .................................................. */
+/* BIODATA section start */
+/* ............................................. */
+
+.section-biodata img{
+  padding: 2.4rem;
+  background: var(--gradient);
+  width: 12rem;
+  height: auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 0.5s linear ;
+  -webkit-transition: all 0.5s linear ;
+  -moz-transition: all 0.5s linear ;
+  -ms-transition: all 0.5s linear ;
+  -o-transition: all 0.5s linear ;
+  
+}
+
+.section-biodata .about-div{
+   
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.about-div .icon img:hover{
+  rotate: 360deg;
+  background: linear-gradient(to right,#3d86fa, #003b99);
+}
+
+.section-biodata .r-content{
+  max-width: 60rem;
+}
+
+
+
+/* ==================+++++++++++++++++++================ */
+
+
+
+.bio-data-stats{
+  display: flex;
+  flex-direction: column;
+  padding: 0 0  4rem 0;
+  gap: 2rem;
+  /* margin-top: 5rem; */
+}
+
+.bio-stats h3{
+  margin-bottom: 1rem;
+}
+
+.bio-progress-bar{
+  width: 90%;
+  height: 0.8rem;
+  background-color: var(--para-tint);
+  border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+.bio-progress-bar::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  background: var(--gradientSupport);
+  border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+}
+.bio-progress-bar::before{
+  width: 90%;
+}
+.bio-progress-2::before{
+  width: 80%;
+}
+.bio-progress-3::before{
+  width: 70%;
+}
+.bio-progress-4::before{
+  width: 75%;
+}
+.bio-progress-5::before{
+  width: 85%;
+}
+.bio-progress-6::before{
+  width: 80%;
+}
+.bio-progress-7::before{
+  width: 70%;
+}
+.bio-progress-8::before{
+  width: 75%;
+}
+
+.bio-progress-bar span{
+  position: absolute;
+  top: 1.8rem;
+  width: 4rem;
+  height: 2rem;
+  background: var(--helper);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: 0;
+}
+
+.bio-progress-bar span{
+  left: 84%;
+}
+.bio-progress-2 span{
+  left: 73%;
+}
+.bio-progress-3 span{
+  left: 63%;
+}
+.bio-progress-4 span{
+  left: 68%;
+}
+.bio-progress-5 span{
+  left: 73%;
+}
+.bio-progress-6 span{
+  left: 68%;
+}
+.bio-progress-7 span{
+  left: 63%;
+}
+.bio-progress-8 span{
+  left: 68%;
+}
+
+
+/* ------------------------------
+portfolio section start
+------------------------------ */
+
+.section-potfolio{
+  background: var(--bg);
+  transition: all 0.7s linear;
+  -webkit-transition: all 0.7s linear;
+  -moz-transition: all 0.7s linear;
+  -ms-transition: all 0.7s linear;
+  -o-transition: all 0.7s linear;
+}
+
+.section-potfolio p{
+  max-width: 60rem;
+}
+
+.p-btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 4rem 0;
+}
+
+.portfolio-images{
+  gap: 3rem;
+}
+
+.portfolio-images img{
+  width: 100%;
+  border-radius: 7px;
+  position: relative;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  overflow: hidden;
+}
+
+.img-overlay{
+  position: relative;
+  overflow: hidden;
+}
+
+.img-overlay .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradientSupport);
+  opacity: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  border-radius: 7px ;
+  -webkit-border-radius: 7px ;
+  -moz-border-radius: 7px ;
+  -ms-border-radius: 7px ;
+  -o-border-radius: 7px ;
+}
+
+.img-overlay:hover > .overlay{
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  cursor: pointer;
+}
+
+.img-overlay .common-heading{
+  margin: 0;
+  color: var(--white);
+  text-decoration: none;
+}
+
+
+.p-btn-active{
+  transform: translateY(-1rem);
+  -webkit-transform: translateY(-1rem);
+  -moz-transform: translateY(-1rem);
+  -ms-transform: translateY(-1rem);
+  -o-transform: translateY(-1rem);
+}
+
+.p-image-not-active{
+  display: none;
+}
+
+/* ==================================================
+ counter section :start
+ ================================================ */
+
+ .section-work-data{
+  background: var(--gradientSupport);
+  text-align: center;
+  transition: all 0.7s linear;
+  -webkit-transition: all 0.7s linear;
+  -moz-transition: all 0.7s linear;
+  -ms-transition: all 0.7s linear;
+  -o-transition: all 0.7s linear;
+  color: var(--white);
+}
+
+.counter-number{
+  font-size: 4.8rem;
+
+}
+
+.section-work-data p{
+ text-transform: capitalize;
+ color: var(--white);
+}
+
+/* ==================================================
+ service offer section :start
+ ================================================ */
+
+ .section-servces{
+  transition: all 0.7s linear;
+  -webkit-transition: all 0.7s linear;
+  -moz-transition: all 0.7s linear;
+  -ms-transition: all 0.7s linear;
+  -o-transition: all 0.7s linear;
+}
+
+.section-servces p{
+  max-width: 60rem;
+}
+
+.section-servces .grid{
+  margin-top: 8rem;
+}
+
+.service-box{
+  text-align: center;
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 4rem 3rem;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+
+.service-box:hover, .service-box:active{
+  transform:  translateY(-3rem);
+  -webkit-transform:  translateY(-3rem);
+  -moz-transform:  translateY(-3rem);
+  -ms-transform:  translateY(-3rem);
+  -o-transform:  translateY(-3rem);
+}
+
+.fa-brands{
+  width: 5rem;
+  height: 5rem;
+}
+
+.service-icon{
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--icon-bg) ;
+  display: inline-block;
+  border-radius: 30% 70% 17% 83% / 69% 22% 78% 31% ;
+  -webkit-border-radius: 30% 70% 17% 83% / 69% 22% 78% 31% ;
+  -moz-border-radius: 30% 70% 17% 83% / 69% 22% 78% 31% ;
+  -ms-border-radius: 30% 70% 17% 83% / 69% 22% 78% 31% ;
+  -o-border-radius: 30% 70% 17% 83% / 69% 22% 78% 31% ;
+  padding: 1.4rem 1.8rem;
+  position: relative;
+  color: var(--heading);
+  animation: water-wave 3s linear  infinite  ;
+  -webkit-animation: water-wave 3s linear  infinite  ;
+}
+
+@keyframes water-wave{
+  0% {
+    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+  }
+  50% {
+    border-radius: 3% 97% 15% 85% / 72% 0% 100% 28%;
+  }
+  100% {
+    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+  }
+}
+
+.service-box h3{
+  text-transform: capitalize;
+  margin: 2rem 0 1rem 0;
+}
+
+
+/* ==================================================
+ swiper section :start
+ ================================================ */
+
+ .swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 6rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-client-message{
+  padding: 5rem 8rem;
+  background: var(--white);
+  text-align: left;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.swiper-client-message p::before{
+  content: "\f10d";
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  font-size: 5rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color:#ced3ff;
+}
+
+.swiper-client-message p::after{
+  content: "\f10e";
+  position: absolute;
+  bottom: 12rem;
+  right: 2rem;
+  font-size: 5rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color:#ced3ff;
+}
+
+.swiper-slide img {
+  max-width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 0.5rem solid var(--helper-tint);
+}
+
+.swiper-client-data{
+  align-items: center;
+  margin-top: 2rem;
+  gap: 3.2rem;
+}
+
+
+/* ==================================================
+ FREELANCING section :start
+ ================================================ */
+
+.section-freelancing{
+  background-image: url("../images/freelancing.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  position: relative;
+  transition: all 0.7s linear;
+  -webkit-transition: all 0.7s linear;
+  -moz-transition: all 0.7s linear;
+  -ms-transition: all 0.7s linear;
+  -o-transition: all 0.7s linear;
+  text-align: center;
+}
+
+.section-freelancing .overlay{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+  
+   background-color:  var(--overlay);
+   opacity: 0.6;
+}
+
+.section-freelancing .container{
+  position: relative;
+}
+
+.section-freelancing h2{
+  font-size: 5.4rem;
+}
+.section-freelancing span{
+  color: #a0f669;
+}
+
+.section-freelancing h2,.section-freelancing p{
+  color: var(--white);
+  margin-bottom: 1.8rem;
+}
+
+
+/* ==================================================
+ contact section :start
+ ================================================ */
+
+ .section-contact-main{
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 8rem;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+.section-contact-main form{
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.section-contact-main .grid{
+  gap: 3.2rem;
+}
+
+.section-contact-main input, 
+.section-contact-main textarea{
+  padding: 1.5rem 2rem;
+  border: 0.1rem solid #4b3f3f;
+  font-size: 1.6rem;
+  font-family: "work sans";
+  width: 100%;
+}
+
+.section-contact-main input[type="submit"]{
+  width: 30%;
+  border: none;
+}
+
+.section-contact-main label{
+  display: inline-block;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/* ==================================================
+Footer section :start
+ ================================================ */
+
+.section-footer{
+  padding: 5rem 0;
+  background-color: var(--heading);
+  transition: all 0.7s linear;
+  -webkit-transition: all 0.7s linear;
+  -moz-transition: all 0.7s linear;
+  -ms-transition: all 0.7s linear;
+  -o-transition: all 0.7s linear;
+}
+
+.section-footer h3{
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+
+.f-about p{
+  color: #adadad;
+}
+
+.f-links ul, .f-services ul, .f-address address{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+
+.f-links li, .f-links a , .f-services li, .f-services a{
+  font-size: 1.8rem;
+  color: #adadad;
+  text-transform: capitalize;
+}
+
+.f-links span,
+ .f-services span,
+  .f-address span{
+margin-right: 1rem;
+}
+
+.f-address p,
+.f-address p a{
+  font-style: normal;
+  color: #adadad;
+}
+
+.f-social-icon{
+  margin: 5rem 0;
+  color: #adadad;
+  text-align: center;
+  /* display: flex; */
+
+}
+
+.f-social-icon .icons{
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--icon-bg);
+  display: inline-block;
+  padding: 1.4rem 1.8rem;
+  position: relative;
+  color: var(--white);
+  cursor: pointer;
+  animation: water-wave 3s linear  infinite  ;
+}
+
+.f-credits p{
+  text-align: center;
+  color: #adadad;
+}
+
+.footer a:hover,
+.footer a:active{
+  color: var(--white);
+}
+
+
+/* ==================================================
+scroll section :start
+ ================================================ */
+
+ .scrollTop-style{
+position: fixed;
+right: 2%;
+bottom: 5%;
+z-index: 1;
+ }
+
+ .scroll-top{
+  width: 3rem;
+  height: 3rem;
+  background: var(--helper);
+  display: inline-block;
+  padding: 1rem 1rem;
+  color: var(--heading) ;
+  cursor: pointer;
+  animation: water-wave 3s linear  infinite  ;
+ }
+
+/* ------------------------------------ */
+ /* media query */
+ /* ---------------------------------- */
+
+
+ @media(max-width : 1150px){
+
+  html{
+    font-size: 56.25%;
+  }
+
+  .container{
+  margin: 0 9rem; 
+}
+
+.grid{
+  gap: 4.8rem;
+}
+
+  .header .logo{
+        margin-left: 2rem;
+  }
+
+  .navbar-list{
+    gap: 2.5rem
+  }
+
+  .section-biodata .about-div{
+    margin-top: 2rem;
+  }
+
+
+ }
+
+
+ /* ===================================
+ media query 980px
+ ================================= */
+ @media(max-width : 980px){
+
+  .section{
+    padding: 3rem;
+  }
+
+  .container{
+    margin: 0 3rem; 
+  }
+
+  /* header .section
+  ========================== */
+  .header{
+    position: relative;
+  }
+
+  .mobile-navbar-btn{
+    display: block;
+    z-index: 10;
+    border: 3px solid black;
+    color: var(--black);
+  }
+
+  .mobile-navbar-icon{
+    width: 5rem;
+    height: 5rem;
+    color: var(--black);
+  }
+
+  .header .logo{
+    width: 35%;
+    height: auto;
+    margin-top: 4rem;
+  }
+
+  .navbar{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+    transform:translateX(100%) ;
+    transition: all 0.5s linear;
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    
+}
+
+  .navbar-list{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .navbar-list .navbar-link:link,
+  .navbar .navbar-list .navbar-link:visited{
+    color: var(--black);
+    font-size: 3.2rem;
+  }
+
+.active .navbar{
+  transform:translateX(0%) ;
+   visibility: visible;
+  opacity: 100;
+  pointer-events: auto;
+}
+
+.active .mobile-navbar-btn .mobile-navbar-icon[name="menu-outline"]{
+  display: none;
+}
+
+.active .mobile-navbar-btn .mobile-navbar-icon[name="close-outline"]{
+  display: block;
+}
+
+
+/* =================================
+hero scection
+================================== */
+
+.section-hero h1{
+  line-height: 1.05;
+}
+
+/* =================================
+biodata scection
+================================== */
+
+.section-biodata img{
+  width: 10rem;
+  height: 10rem;
+}
+.section-biodata .about-div h3{
+  font-weight: bold;
+}
+
+.section-biodata .about-div p{
+  line-height: 1.3;
+}
+
+/* =================================
+service scection
+================================== */
+
+.section-servces .grid-three-column{
+  grid-template-columns: repeat(2,1fr);
+}
+
+/* =================================
+contact scection
+================================== */
+.section-contact .grid-two-column{
+  grid-template-columns: 1fr;
+}
+
+/* =================================
+footer scection
+================================== */
+
+.section-footer .grid-four-column{
+  grid-template-columns: repeat(2,1fr);
+}
+
+ }
+
+
+ /* =================================
+ media query 
+ ================================ */
+
+ @media(max-width : 800px){
+
+  .container{
+    max-width: 780rem;
+  }
+
+  .common-heading{
+    font-size: 3rem;
+  }
+
+  .header .mobile-navbar-btn{
+    margin: 1rem 1rem 0 0 ;
+   }
+
+  .section-hero .grid-two-column{
+    grid-template-columns: 1fr;
+  }
+
+  .section-hero-data{
+    align-items: center;
+  }
+
+  .section-hero-data h1{
+    font-size: 5.4rem;
+  }
+
+  .section-hero-data p{
+    font-size: 1.8rem;
+  }
+  
+  .hero-heading{
+    text-align: center;
+  }
+
+  .hero-para{
+    text-align: justify;
+  }
+
+/* ====================================
+resume/ biodata section 
+===================================== */
+
+.section-biodata .grid-two-column{
+  grid-template-columns: 1fr;
+}
+
+.section-biodata .bio-data-stats{
+ margin-top: 0;
+ padding-top: 0;
+ }
+
+ .section-biodata .r-education{
+  margin-left: 5rem;
+ }
+
+ .section-biodata p{
+  font-size: 1.7rem;
+ }
+
+ .section-biodata .about-div{
+  gap: 5rem;
+ }
+
+/* ====================================
+latest work/ porfolio section 
+===================================== */
+
+.section-potfolio .grid-three-column{
+  grid-template-columns: repeat(2,1fr);
+}
+
+}
+
+
+
+
+
+/* ======================================
+media query 720px
+====================================== */
+
+@media (max-width: 720px){
+
+  .section-hero .section-biodata p{
+    line-height: 1.6;
+    font-size: 1.7rem;
+  }
+
+  .header{
+    padding: 0 2rem;
+  }
+
+  .mobile-navbar-icon{
+    width: 4rem;
+    height: 4rem;
+  }
+
+
+  .section{
+    padding: 2rem;
+  }
+
+  .container{
+    margin: 0 2rem; 
+  }
+
+  /* ==================================
+  portfolio section
+=================================== */
+.section-potfolio .grid-three-column{
+grid-template-columns: 1fr;
+}
+
+/* ==================================
+  counter section
+=================================== */
+.section-work-data .grid-four-column{
+  grid-template-columns: repeat(2,1fr);
+}
+
+/* <!-- --------------------------------------------
+   Services Section started
+   --------------------------------------------- --> */
+
+   .section-servces .grid-three-column{
+    grid-template-columns: 1fr;
+   }
+
+   
+/* <!-- --------------------------------------------
+   footer Section started
+   --------------------------------------------- --> */
+
+   .section-footer{
+    padding: 2rem 2rem;
+   }
+}
+
+
+
+/* ======================================
+media query 580px
+====================================== */
+
+@media (max-width: 580px){
+
+  .header{
+    padding: 0 1.5rem;
+  }
+
+  .header .mobile-navbar-btn{
+    margin-right:  2rem  ;
+   }
+
+  .mobile-navbar-icon{
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .section{
+    padding: 1rem;
+  }
+
+  .container{
+    margin: 0 2rem; 
+  }
+
+/* <!-- --------------------------------------------
+   hero main Section started
+   --------------------------------------------- --> */
+.section-hero h1{
+  font-size: 4rem;
+}
+
+
+/* ====================================
+resume/ biodata section 
+===================================== */
+
+.section-biodata .r-education{
+  margin-left: 0rem;
+ }
+
+ .section-biodata .r-content{
+text-align: justify;
+ }
+
+ .section-servces .grid{
+  margin-top: 5rem;
+}
+     
+/* <!-- ------------------------------------------------
+latest work / potfolio Section started
+-------------------------------------------------- --> */
+.section-potfolio .p-btns{
+ flex-direction: column;
+}
+
+.section-potfolio p{
+  text-align: justify;
+}
+
+.section-servces .s-content{
+  text-align: justify;
+}
+
+}
+
+
+@media(max-width:500px){
+
+  .header{
+    padding: 0 1rem;
+  }
+
+  
+
+  .section{
+    padding: 1.5rem;
+  }
+
+  .container{
+    margin: 0 1rem; 
+  }
+
+
+/* =========================
+resume section
+======================= */
+
+.section-biodata .r-data{
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* <!-- --------------------------------------------
+   footer Section started
+   --------------------------------------------- --> */
+
+   .section-footer{
+    padding: 2rem 2rem;
+   }
+
+   .footer .f-address p,
+   .footer .f-about p,
+    .footer .f-links a,
+    .footer .f-address a,
+     .footer .f-services a{
+     font-size: 1.5rem;
+   }
+
+   .footer .grid-four-column{
+    gap: 2rem;
+   }
+
+}
+
+@media(max-width:400px){
+  .section-hero h1{
+font-size: 3.2rem;
+  }
+
+  .section-hero .hero-para{
+    margin-top: 0.5rem;
+  }
+
+}
